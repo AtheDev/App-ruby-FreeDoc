@@ -1,0 +1,10 @@
+class CreateDealWithIts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :deal_with_its do |t|
+      t.belongs_to :doctor, index: true
+      t.belongs_to :specialty, index: true
+
+      t.timestamps
+    end
+  end
+end
